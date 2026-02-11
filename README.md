@@ -1,71 +1,49 @@
-# Weather Forecasting and Flood Prediction using HYBRID LSTM
+# Weather Forecasting and Flood Prediction using HYBIRD LSTM
 
-## Project Overview
-This project implements a hybrid LSTM (Long Short-Term Memory) model for accurate weather forecasting and flood prediction. The aim is to utilize historical weather data and other relevant features to make predictions that can help mitigate the impacts of flooding.
+## Project Title
+Weather Forecasting and Flood Prediction using HYBIRD LSTM
 
-## Project Structure
-The repository is organized as follows:
+## Description
+This project aims to use hybrid LSTM models for effective weather forecasting and flood prediction, enhancing disaster management and preparedness.
 
+## Installation
+1. Clone the repository:
+   ```
+   git clone https://github.com/kanishkanth-25/weather_forecasting-and-flood_prediction-using-HYBIRD_LSTM.git
+   ```
+2. Navigate into the project directory:
+   ```
+   cd weather_forecasting-and-flood_prediction-using-HYBIRD_LSTM
+   ```
+3. Install necessary dependencies for both frontend and backend.
+
+## Usage
+- To start the backend server, run:
+  ```
+  node backend/server.js
+  ```
+- Open the `frontend/index.html` in a web browser to see the application in action.
+
+## Folder Structure
 ```
 weather_forecasting-and-flood_prediction-using-HYBIRD_LSTM/
 │
-├── data/                # Directory for storing datasets.
-│   ├── raw/            # Original, immutable data dump.
-│   └── processed/      # Processed data used for model training.
-���
-├── notebooks/          # Jupyter notebooks for exploration and visualization.
+├── backend/
+│   ├── server.js
+│   ├── config/
+│   ├── routes/
+│   └── controllers/
 │
-├── scripts/            # Python scripts for model training, evaluation, and deployment.
-│   ├── train.py        # Script to train the LSTM model.
-│   ├── predict.py      # Script to make predictions using the trained model.
-│   └── utils.py        # Utility functions used across scripts.
-│
-├── requirements.txt    # List of Python packages required to run the project.
-├── README.md           # Project documentation.
-└── .gitignore          # Git ignore file.
-```
+└── frontend/
+    ├── index.html
+    ├── css/
+    │   └── styles.css
+    └── js/
+        └── app.js
+```  
 
-## Setup Instructions
-To set up the project locally, follow these steps:
-
-1. **Clone the repository:**  
-   ```bash
-   git clone https://github.com/kanishkanth-25/weather_forecasting-and-flood_prediction-using-HYBIRD_LSTM.git
-   cd weather_forecasting-and-flood_prediction-using-HYBIRD_LSTM
-   ```
-
-2. **Create a virtual environment (optional but recommended):**  
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows use `venv\Scripts\activate`
-   ```
-
-3. **Install dependencies:**  
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-## Usage
-After setting up the repository, you can use the scripts to train the model and make predictions. Here’s a brief overview of how to do this:
-
-1. **Train the model:**  
-   ```bash
-   python scripts/train.py
-   ```
-   This script will load the processed data, train the LSTM model, and save the model to disk.
-
-2. **Make predictions:**  
-   ```bash
-   python scripts/predict.py
-   ```
-   This script will load the trained model and use it to make predictions based on new input data.
-
-## Contribution
-Contributions are welcome! Please create an issue or submit a pull request for any enhancements or new features you'd like to see.
+## Contributing
+Feel free to contribute to this project by submitting issues or pull requests.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Ensure all necessary adjustments are made to fit your needs.
+This project is licensed under the MIT License. See the LICENSE file for more details.
