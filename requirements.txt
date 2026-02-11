@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+numpy
+pandas
+scikit-learn
+tensorflow==2.15.0
+joblib
+pydantic
+aiofiles
+requests
+python-multipart
