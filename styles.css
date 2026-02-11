@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, Arial;
+  background: #f3f6fa;
+  color: #0f1724;
+}
+
+/* ========================= */
+/* Header */
+/* ========================= */
+.header {
+  padding: 26px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 {
+  font-size: 26px;
+  margin: 0;
+}
+.hint {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* Layout */
+/* ========================= */
+.content {
+  display: flex;
+  gap: 26px;
+  padding: 0 40px 40px;
+}
+
+.left {
+  flex: 1;
+}
+.right {
+  width: 420px;
+}
+
+/* ========================= */
+/* Card */
+/* ========================= */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+
+.big {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.muted {
+  color: #9ca3af;
+  padding: 8px;
+}
+
+/* ========================= */
+/* Controls */
+/* ========================= */
+.controls {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+input[type="number"] {
+  padding: 8px;
+  width: 80px;
+  border-radius: 8px;
+  border: 1px solid #d0d7e2;
+}
+.btn {
+  background: #4f46e5;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn:disabled {
+  background: #8b8fc7;
+}
+.message {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* Table */
+/* ========================= */
+.pred-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.pred-table th {
+  background: #eef1f6;
+  padding: 10px;
+  text-align: left;
+}
+.pred-table td {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ========================= */
+/* Gemini Floating Assistant */
+/* ========================= */
+
+.gemini-btn {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  background: #4f46e5;
+  color: white;
+  font-size: 22px;
+  border: none;
+  padding: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+.gemini-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Gemini Chat Window */
+.gemini-box {
+  position: fixed;
+  bottom: 90px;
+  right: 26px;
+  width: 340px;
+  height: 460px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.gemini-header {
+  background: #4f46e5;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+.gemini-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Messages Area */
+.gemini-messages {
+  padding: 12px;
+  flex: 1;
+  overflow-y: auto;
+  background: #f7f8fc;
+}
+
+/* Chat bubbles */
+.msg-bot {
+  background: #e4e7ff;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  color: #1f2671;
+}
+
+.msg-user {
+  background: #d1fae5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  margin-left: auto;
+  color: #065f46;
+}
+
+/* Input area */
+.gemini-input {
+  display: flex;
+  border-top: 1px solid #e5e7eb;
+}
+.gemini-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  outline: none;
+}
+.gemini-input button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+/* Dark Mode */
+.dark {
+  background: #1a1a1a;
+  color: white;
+}
+
+.dark .card {
+  background: #252525;
+  color: white;
+}
+
+.dark .pred-table td, 
+.dark .pred-table th {
+  color: white;
+}
+
+/* Forecast bar */
+.forecast-bar {
+  margin-top: 10px;
+}
+
+.forecast-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.forecast-item {
+  padding: 8px 12px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 90px;
+}
+
+.dark .forecast-item {
+  background: #333;
+}
+
+.f-date {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.f-temp {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Live weather card */
+.live-card {
+  text-align: center;
+}
+
+.live-icon {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+/* Loading spinner */
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 3px solid #fff;
+  border-left-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dark Mode Button */
+.dark-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.gemini-btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.gemini-box {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  width: 330px;
+  height: 420px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.gemini-header {
+  padding: 10px;
+  background: #1d4ed8;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gemini-messages {
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.msg-bot {
+  background: #f8d7da;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 5px;
+}
+
+.msg-user {
+  background: #d1f1f0;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.gemini-input {
+  display: flex;
+  padding: 10px;
+  gap: 5px;
+}
+.gemini-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+
+.f-sub {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
